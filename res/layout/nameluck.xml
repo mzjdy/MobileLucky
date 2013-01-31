@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:background="@drawable/business_rcs_setting_bg"
+	android:layout_height="fill_parent" >
+	<include 
+	    layout="@layout/title_bar"
+	    />
+	<include 
+	    layout="@layout/connection_changed"
+	    />
+	<!-- 
+	<LinearLayout android:orientation="horizontal"
+		android:background="@drawable/bg_topbar" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:layout_weight="0">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center"
+			android:textSize="18sp" android:text="手机号吉凶" 
+			android:textColor="#333842"
+			/>
+	</LinearLayout>
+	 -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<EditText android:id="@+id/et" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginLeft="10dip"
+			android:hint="输入身份证"
+			android:inputType="number"
+			android:maxLength="18"
+			android:layout_weight="1" />
+		<Button android:id="@+id/btn_search" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="2"
+			android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+			android:textSize="18sp"
+			android:textColor="#333842"
+			android:text="查询" />
+	</LinearLayout>
+	<!-- 
+	<WebView android:id="@+id/wv" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="1"
+		android:background="@drawable/business_rcs_setting_bg"
+		 />
+		  -->
+		  <ScrollView
+		      android:layout_width="fill_parent"
+		      android:layout_height="fill_parent"
+		      android:layout_weight="1"
+		      android:padding="10dp"
+		      >
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    
+	    
+	    >
+	    <TextView
+	        android:id="@+id/mobile_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:textSize="18sp"
+	        android:gravity="center_horizontal"
+	        android:text="所查身份证："
+	        android:layout_marginTop="5dp"
+			android:textColor="#333842"
+	        />
+	    <TextView
+	        android:id="@+id/jx"
+	        android:layout_width="60dp"
+	        android:layout_height="wrap_content"
+	        android:textSize="18sp"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignTop="@+id/mobile_name"
+	        android:textColor="#ff0000"
+	        android:text=""
+	        android:gravity="center"
+	        android:background="@drawable/joiner_bg_selected"
+	        />
+	    <TextView
+	        android:id="@+id/mobile"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/mobile_name"
+	        android:layout_toRightOf="@+id/mobile_name"
+	        android:layout_toLeftOf="@+id/jx"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        />
+	    
+	    
+	    <TextView
+	        android:id="@+id/jxdetail_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/mobile_name"
+	        android:layout_below="@+id/mobile"
+	        android:textSize="18sp"
+	        android:gravity="center_horizontal"
+	        android:text="号码分析："
+	        android:layout_marginTop="5dp"
+			android:textColor="#333842"
+	        />
+	    <TextView
+	        android:id="@+id/jxdetail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/jxdetail_name"
+	        android:layout_toRightOf="@+id/jxdetail_name"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        />
+	    
+	    <TextView
+	        android:id="@+id/gx_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/mobile_name"
+	        android:layout_below="@+id/jxdetail"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        android:gravity="center_horizontal"
+	        android:text="主人个性："
+	        android:layout_marginTop="5dp"
+	        />
+	    <TextView
+	        android:id="@+id/gx"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/gx_name"
+	        android:layout_toRightOf="@+id/gx_name"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        />
+	    
+	    <TextView
+	        android:id="@+id/gxdetail_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/mobile_name"
+	        android:layout_below="@+id/gx"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        android:gravity="center_horizontal"
+	        android:text="具体表现："
+	        android:layout_marginTop="5dp"
+	        />
+	    <TextView
+	        android:id="@+id/gxdetail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/gxdetail_name"
+	        android:layout_toRightOf="@+id/gxdetail_name"
+	        android:textSize="18sp"
+			android:textColor="#333842"
+	        />
+	    
+	</RelativeLayout>
+	
+	</ScrollView>
+	<Button
+	    android:id="@+id/send"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0"
+	    android:text="发送占卜结果（短信）"
+	    android:textSize="18sp"
+			android:textColor="#333842"
+	    />
+	<include 
+	    layout="@layout/ad"
+	    />
+</LinearLayout>
